@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Panel</title>
+
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="admin-header">
+  <h1>⚙️ Admin Dashboard</h1>
+  <button class="logout-btn" onclick="logout()">Logout</button>
+</div>
+
+<!-- ADMIN CONTENT -->
+<div class="admin-container">
+
+  <!-- SHOP CRUD -->
+  <div class="admin-box">
+    <h2>🛒 Shop Items</h2>
+
+    <input id="sname" placeholder="Item Name">
+    <input id="sprice" placeholder="Price">
+    <input id="simg" placeholder="Image Path">
+
+    <button onclick="addShop()">Add Item</button>
+
+    <div id="shopList"></div>
+  </div>
+
+  <!-- MANGA CRUD -->
+  <div class="admin-box">
+    <h2>📘 Manga Chapters</h2>
+
+    <input id="mname" placeholder="Chapter Name">
+    <input id="mimg" placeholder="Image Path">
+
+    <button onclick="addManga()">Add Chapter</button>
+
+    <div id="mangaList"></div>
+  </div>
+
+</div>
+
+<script src="js/admin.js"></script>
+
+<script>
+function logout(){
+  window.location.replace("index.html");
+}
+</script>
+
+</body>
+</html>

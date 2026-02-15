@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, Arial;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+        url("../images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+/* LOGIN */
+
+.login-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    width: 380px;
+    padding: 45px;
+    border-radius: 25px;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(12px);
+    text-align: center;
+    box-shadow: 0 0 50px rgba(255,64,64,0.6);
+}
+
+.login-card h2 {
+    color: #ff4040;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 25px;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+}
+
+.login-card button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 30px;
+    border: none;
+    font-weight: bold;
+    background: linear-gradient(135deg,#ff4040,#ff1f1f);
+    color: white;
+    cursor: pointer;
+}
+
+.login-card button:hover {
+    box-shadow: 0 0 25px rgba(255,64,64,0.9);
+}
+
+/* ADMIN PANEL */
+
+h1 {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.admin-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.admin-box {
+    background: rgba(0,0,0,0.65);
+    padding: 25px;
+    width: 350px;
+    border-radius: 18px;
+}
+
+.admin-box h2 {
+    color: #ff4040;
+    margin-bottom: 15px;
+}
+
+.admin-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+.admin-box button {
+    width: 100%;
+    padding: 10px;
+    background: #ff4040;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.admin-box button:hover {
+    background: #ff1f1f;
+}
+
+.item {
+    margin-top: 10px;
+    padding: 10px;
+    background: #111;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+}
+
+.item button {
+    background: red;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ============================
+   LOGOUT BUTTON
+============================ */
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 0 40px;
+}
+
+.logout-btn {
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: none;
+    background: #ff4040;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logout-btn:hover {
+    background: #ff1f1f;
+    box-shadow: 0 0 20px rgba(255,64,64,0.8);
+}

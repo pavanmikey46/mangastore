@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>One Piece World</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <h2>🏴‍☠️ One Piece World</h2>
+
+  <nav class="nav-buttons">
+    <a href="#home">Home</a>
+    <a href="#manga">Manga</a>
+    <a href="#shop">Shop</a>
+    <a href="#cart">Cart</a>
+    <a href="#contact">Contact</a>
+    <a href="login.html">Admin</a>
+  </nav>
+</header>
+
+<!-- HOME -->
+<section id="home">
+  <div class="slider">
+    <img id="slide" src="images/slider/1.jpg">
+
+    <div class="overlay">
+      <h1>Welcome to One Piece World</h1>
+      <p>Read • Shop • Explore</p>
+    </div>
+
+    <button class="left" onclick="prev()">‹</button>
+    <button class="right" onclick="next()">›</button>
+  </div>
+
+  <div class="continue-wrap">
+    <button class="continue-btn" onclick="continueReading()">📖 Continue Reading</button>
+  </div>
+</section>
+
+<!-- MANGA -->
+<section id="manga" class="reveal">
+  <h2>One Piece Manga</h2>
+
+  <div class="manga-grid">
+    <div class="manga-card">
+      <img src="images/manga/onepiece/ch1/1.jpg">
+      <div class="manga-info">
+        <h3>One Piece</h3>
+        <p>Chapter 1</p>
+      </div>
+    </div>
+
+    <div class="manga-card">
+      <img src="images/manga/onepiece/ch1/2.jpg">
+      <div class="manga-info">
+        <h3>One Piece</h3>
+        <p>Chapter 2</p>
+      </div>
+    </div>
+
+    <div class="manga-card">
+      <img src="images/manga/onepiece/ch1/3.jpg">
+      <div class="manga-info">
+        <h3>One Piece</h3>
+        <p>Chapter 3</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOP -->
+<section id="shop" class="reveal">
+  <h2>Anime Merchandise</h2>
+
+  <div class="shop-wrapper">
+    <button class="scroll-btn left-btn" onclick="scrollShop(-1)">◀</button>
+    <div id="shopItems"></div>
+    <button class="scroll-btn right-btn" onclick="scrollShop(1)">▶</button>
+  </div>
+</section>
+
+<!-- CART -->
+<section id="cart" class="reveal">
+  <h2>Your Cart</h2>
+  <div id="cartItems"></div>
+  <h3 id="total"></h3>
+  <button class="buy-btn" onclick="buyNow()">Buy Now</button>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="reveal">
+
+  <div class="contact-full">
+
+    <!-- LEFT -->
+    <div class="contact-left">
+      <h1>Contact Us</h1>
+      <p>
+        Thank you for visiting One Piece World.  
+        Feel free to contact us anytime.
+      </p>
+      <p class="visit">✨ Visit Again!</p>
+    </div>
+
+    <!-- CENTER -->
+    <div class="contact-center">
+      <h2>Get in Touch</h2>
+      <p><strong>Email:</strong> onepieceworld@gmail.com</p>
+      <p><strong>Phone:</strong> +91 98765 43210</p>
+      <p><strong>Address:</strong> Grand Line, One Piece Anime Store, India</p>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="contact-right">
+      <h2>Follow Us</h2>
+
+      <div class="social-icons">
+        <a href="#" class="insta"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<script src="js/slider.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/scroll.js"></script>
+<script src="js/navScroll.js"></script>
+<script src="js/shopScroll.js"></script>
+
+<script>
+function continueReading(){
+  let p = JSON.parse(localStorage.progress || "null");
+  if(!p){
+    alert("No reading progress found");
+    return;
+  }
+  location.href = `reader.html?ch=${p.ch}&page=${p.page}`;
+}
+</script>
+
+</body>
+</html>

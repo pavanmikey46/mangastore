@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Login</title>
+
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<div class="login-wrapper">
+
+  <div class="login-card">
+    <h2>Admin Login</h2>
+    <p class="subtitle">One Piece Control Panel</p>
+
+    <input type="text" id="user" placeholder="Username">
+    <input type="password" id="pass" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+
+    <p class="hint">Only authorized admin allowed</p>
+  </div>
+
+</div>
+
+<script>
+function login(){
+  const u = document.getElementById("user").value.trim();
+  const p = document.getElementById("pass").value.trim();
+
+  if(u === "admin" && p === "1234"){
+    window.location.replace("admin.html");
+  } else {
+    alert("Invalid admin credentials");
+  }
+}
+</script>
+
+</body>
+</html>
